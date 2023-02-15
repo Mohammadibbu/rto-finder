@@ -30,7 +30,6 @@ const searchRecord = async (value) => {
     resultSectionEl.querySelector('#rto_district').innerText =
       recordFound.district;
   } else {
-      resultSectionEl.querySelector('#query').innerText = "No Record Found!";
     resultSectionEl.classList.add('hidden');
   }
 };
@@ -40,6 +39,6 @@ inputEl.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {
     if (inputEl.value.length > 3) {
       searchRecord(inputEl.value);
-    }else{alert("invalid Number");}
+    }
   }
 });
