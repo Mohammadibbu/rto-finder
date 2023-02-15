@@ -33,7 +33,7 @@ const searchRecord = async (value) => {
       recordFound.district;
   } else {
     norec.style.display="block";
-    setTimeout(()=>{norec.style.display="none";},6000);}
+    setTimeout(()=>{norec.style.display="none";},6000);
 
     resultSectionEl.classList.add('hidden');
   }
@@ -43,6 +43,6 @@ inputEl.addEventListener('keyup', (e) => {
   // check my validation here
   if (e.key === 'Enter') {
     if (inputEl.value.length > 3) {
-      searchRecord(inputEl.value);}else{alert("invalid Number!");}
+      searchRecord(inputEl.value);}else if(inputEl.value){alert("please enter the number")}else{alert("invalid Number!");}
   }
 });
