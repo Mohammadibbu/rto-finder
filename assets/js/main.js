@@ -21,7 +21,7 @@ const searchRecord = async (value) => {
   if (recordFound) {
     // record exist
     resultSectionEl.classList.remove('hidden');
-
+    norec.style.display="none";
     // Update the UI fields
     resultSectionEl.querySelector('#query').innerText = value.toUpperCase();
     resultSectionEl.querySelector('#rto_id').innerText = recordFound.id;
@@ -44,6 +44,6 @@ inputEl.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {
     if (inputEl.value.length > 3) {
       searchRecord(inputEl.value);
-    }else if(inputEl.value == null){alert("Please Enter the valid Number");}else{alert("invalid Number!");}
+    }else if(inputEl.value === ''){alert("Please Enter the valid Number");}else{alert("invalid Number!");}
   }
 });
