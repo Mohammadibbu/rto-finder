@@ -30,6 +30,7 @@ const searchRecord = async (value) => {
     resultSectionEl.querySelector('#rto_district').innerText =
       recordFound.district;
   } else {
+    alert("No Record Found!");
     resultSectionEl.classList.add('hidden');
   }
 };
