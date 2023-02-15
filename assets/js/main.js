@@ -33,7 +33,6 @@ const searchRecord = async (value) => {
       recordFound.district;
   } else {
     norec.style.display="block";
-   setTimeout(()=>{norec.style.display="none";},5000);
     resultSectionEl.classList.add('hidden');
   }
 };
