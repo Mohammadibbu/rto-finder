@@ -16,6 +16,8 @@ const searchRecord = async (value) => {
   // check this: https://github.com/anburocky3/RTO-NumberPlate-Finder/issues/1
 
   const resultSectionEl = document.querySelector('#resultSection');
+  const norec = document.querySelector('#no_rec');
+  
   if (recordFound) {
     // record exist
     resultSectionEl.classList.remove('hidden');
@@ -30,7 +32,7 @@ const searchRecord = async (value) => {
     resultSectionEl.querySelector('#rto_district').innerText =
       recordFound.district;
   } else {
-    alert("No Record Found!");
+    norec.style.display="block";
     resultSectionEl.classList.add('hidden');
   }
 };
@@ -40,6 +42,6 @@ inputEl.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {
     if (inputEl.value.length > 3) {
       searchRecord(inputEl.value);
-    }
+    }else{alert("invalid Number!");}
   }
 });
