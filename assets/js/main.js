@@ -21,7 +21,7 @@ const searchRecord = async (value) => {
   if (recordFound) {
     // record exist
     resultSectionEl.classList.remove('hidden');
-    
+    norec.style.display="none";
     // Update the UI fields
     resultSectionEl.querySelector('#query').innerText = value.toUpperCase();
     resultSectionEl.querySelector('#rto_id').innerText = recordFound.id;
@@ -43,6 +43,6 @@ inputEl.addEventListener('keyup', (e) => {
   // check my validation here
   if (e.key === 'Enter') {
     if (inputEl.value.length > 3) {
-      searchRecord(inputEl.value);}else if(inputEl.value){alert("please enter the number")}else{alert("invalid Number!");}
+      searchRecord(inputEl.value);}else if(inputEl.value === ""){alert("Please Enter the Number")}else{alert("invalid Number!");}
   }
 });
