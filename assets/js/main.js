@@ -43,9 +43,6 @@ inputEl.addEventListener('keyup', (e) => {
   // check my validation here
   if (e.key === 'Enter') {
     if (inputEl.value.length > 3) {
-      searchRecord(inputEl.value);
-        }else if(inputEl.value === ''){
-         alert("Please Enter the valid Number");
-        }else{alert("invalid Number!");}
+      searchRecord(inputEl.value);}else{alert("invalid Number!");}
   }
 });
