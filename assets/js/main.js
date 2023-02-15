@@ -10,7 +10,7 @@ const searchRecord = async (value) => {
 
   const jsonData = await getJSONData();
 
-  const recordFound = jsonData.find((record) =>  record.code === value.toUpperCase());
+  const recordFound = jsonData.find((record) =>  record.code === value.toUpperCase().startsWith(record.code));
   
   // the above code changed, the code can be written even more like this.
   // check this: https://github.com/anburocky3/RTO-NumberPlate-Finder/issues/1
