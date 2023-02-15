@@ -33,6 +33,8 @@ const searchRecord = async (value) => {
       recordFound.district;
   } else {
     norec.style.display="block";
+    setTimeout(()=>{norec.style.display="none";},6000);}
+
     resultSectionEl.classList.add('hidden');
   }
 };
@@ -42,6 +44,6 @@ inputEl.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {
     if (inputEl.value.length > 3) {
       searchRecord(inputEl.value);
-    }else{alert("invalid Number!");}
+    }else if(inputEl.value==null){alert("Please Enter the valid Number");}else{alert("invalid Number!");}
   }
 });
