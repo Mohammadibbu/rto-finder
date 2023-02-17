@@ -26,8 +26,8 @@ const searchRecord = async (value) => {
     resultSectionEl.querySelector('#query').innerText = value.toUpperCase();
     resultSectionEl.querySelector('#rto_id').innerText = recordFound.id;
     resultSectionEl.querySelector('#rto_code').innerText = recordFound.code;
-    resultSectionEl.querySelector('#rto_location').innerText ="<i style='background:lightgreen;'>+
-      recordFound.location+</i>;
+    resultSectionEl.querySelector('#rto_location').innerText ='<i style="background:lightgreen;">'+
+      recordFound.location+'</i>';
     resultSectionEl.querySelector('#rto_type').innerText = recordFound.type;
     resultSectionEl.querySelector('#rto_district').innerText =
       recordFound.district;
